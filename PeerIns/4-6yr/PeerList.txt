@@ -1,0 +1,10 @@
+104151 AZ State
+232186 George Mason
+139940 Georgia State University
+209807 Portland State U
+110653 UC Irvine
+163268 University of Maryland-Baltimore County
+209551 University of Oregon
+133951 Florida International University
+110671 University of California-Riverside
+110714 University of California-Santa Cruz
