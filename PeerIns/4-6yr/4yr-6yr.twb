@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.18.0703.2201                               -->
+<workbook original-version='10.4' source-build='10.4.9 (10400.18.0703.2201)' source-platform='mac' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='everything' inline='true' name='federated.14404tw002nw9s1fy8bpb07oi7ct' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='everything' name='textscan.1rnbtse0n2y3xt1c85hdo1y5bmo9'>
+            <connection class='textscan' directory='/Users/hoapham/Desktop/College/Summer 2018/OIT/UTSA_Internship/PeerIns/4-6yr' filename='everything.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1rnbtse0n2y3xt1c85hdo1y5bmo9' name='everything.csv' table='[everything#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='Year - Type' ordinal='1' />
+            <column datatype='real' name='Median' ordinal='2' />
+            <column datatype='real' name='The University of Texas at San Antonio' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[everything.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year - Type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year - Type]</local-name>
+            <parent-name>[everything.csv]</parent-name>
+            <remote-alias>Year - Type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Median</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Median]</local-name>
+            <parent-name>[everything.csv]</parent-name>
+            <remote-alias>Median</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>The University of Texas at San Antonio</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[The University of Texas at San Antonio]</local-name>
+            <parent-name>[everything.csv]</parent-name>
+            <remote-alias>The University of Texas at San Antonio</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;double&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[everything.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' hidden='true' name='[F1]' role='measure' type='quantitative' />
+      <column datatype='real' name='[Median]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='UTSA' datatype='real' name='[The University of Texas at San Antonio]' role='measure' type='quantitative' />
+      <column-instance column='[Median]' derivation='Sum' name='[sum:Median:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[The University of Texas at San Antonio]' derivation='Sum' name='[sum:The University of Texas at San Antonio:qk]' pivot='key' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.469065' measure-ordering='alphabetic' measure-percentage='0.530935' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:Median:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:The University of Texas at San Antonio:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontsize='14'>Graduation Rates of UTSA &amp; Median of Aspirational Peers</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='everything' name='federated.14404tw002nw9s1fy8bpb07oi7ct' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14404tw002nw9s1fy8bpb07oi7ct'>
+            <column datatype='real' name='[Median]' role='measure' type='quantitative' />
+            <column caption='UTSA' datatype='real' name='[The University of Texas at San Antonio]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Year - Type]' role='dimension' type='nominal' />
+            <column-instance column='[Year - Type]' derivation='None' name='[none:Year - Type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Median]' derivation='Sum' name='[sum:Median:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[The University of Texas at San Antonio]' derivation='Sum' name='[sum:The University of Texas at San Antonio:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:Median:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:The University of Texas at San Antonio:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <sort class='manual' column='[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:Median:qk]&quot;</bucket>
+              <bucket>&quot;[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:The University of Texas at San Antonio:qk]&quot;</bucket>
+            </dictionary>
+          </sort>
+          <slices>
+            <column>[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14404tw002nw9s1fy8bpb07oi7ct].[Multiple Values]' scope='rows' value='' />
+            <format attr='subtitle' class='0' field='[federated.14404tw002nw9s1fy8bpb07oi7ct].[Multiple Values]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.14404tw002nw9s1fy8bpb07oi7ct].[Multiple Values]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.14404tw002nw9s1fy8bpb07oi7ct].[Multiple Values]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.14404tw002nw9s1fy8bpb07oi7ct].[none:Year - Type:nk]' value='105' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14404tw002nw9s1fy8bpb07oi7ct].[Multiple Values]</rows>
+        <cols>[federated.14404tw002nw9s1fy8bpb07oi7ct].[none:Year - Type:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+            <card pane-specification-id='0' param='[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.14404tw002nw9s1fy8bpb07oi7ct].[:Measure Names]</field>
+            <field>[federated.14404tw002nw9s1fy8bpb07oi7ct].[none:Year - Type:nk]</field>
+            <field>[federated.14404tw002nw9s1fy8bpb07oi7ct].[sum:The University of Texas at San Antonio:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
